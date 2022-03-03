@@ -19,8 +19,8 @@ count = {}
 for i in s:
     try: count[i] += 1
     except: count[i] = 1
-
-print(max(count))
+print(count.items())
+print(max(count.items()))
 
 
 
