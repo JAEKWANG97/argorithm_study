@@ -1,5 +1,6 @@
 # 금지된 단어를 제외한 가장 흔하게 등장하는 단어를 출력하라. 대소문자 구분을 하지 않으며, 구두점 또한 무시한다.
 
+from ast import Pass
 import collections
 import re
 
@@ -12,15 +13,23 @@ banned = ["hit"]
 paragraph = paragraph.split()
 s = re.sub('[^a-z0-9]', ' ', str(paragraph))
 s = s.split()
-print(s)
+
+for value in banned:
+    s.remove(value)
 
 count = {}
 
 for i in s:
     try: count[i] += 1
     except: count[i] = 1
-print(count.items())
-print(max(count.items()))
+max_value = max(count.values())
+
+print(max_value)
+
+for i in range(len(count)):
+    Pass()
+    
+
 
 
 
