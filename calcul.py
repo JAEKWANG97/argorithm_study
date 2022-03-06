@@ -3,7 +3,11 @@ from this import d
 from turtle import onscreenclick
 
 
-value = 66+(13.7*82)+(5*172) - 6.8*26
+height = int(input('키를 입력하시오'))
+weight = int(input('몸무게를 입력하시오'))
+
+
+value = 66+(13.7*weight)+(5*height) - 6.8*26
 
 Need_value = value * 1.55
 
