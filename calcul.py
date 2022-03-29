@@ -30,3 +30,12 @@ onece_meal = {'탄수화물 그람' : carbon_cal/4, '단백질 그람' : protein
 print('하루 총 열량 : ', diet_cal)
 print('식사 한끼 열량(4끼) : ' , onece_meal)
 
+
+
+#심박수에 따른 운동 법
+bpm = int(0)
+age = 26
+max_bpm = int(220) - age
+
+
+
