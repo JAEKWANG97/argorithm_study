@@ -5,12 +5,13 @@
 # weight = int(input('몸무게를 입력하시오 : '))
 # age = int(input('나이를 입력하시오: '))
 
-height = int(172)
-weight = int(82)
-age = int(26)
+height = int(162)
+weight = int(47)
+age = int(27)
 
 # 기초 대사량(헤리슨 베네딕트 방정식)
 value = 66+(13.7*weight)+(5*height) - 6.8*age
+print("기초대사량", round(value))
 # 유지
 Need_value = round(value * 1.55)
 print("유지 칼로리 ", Need_value)
@@ -28,6 +29,4 @@ diet_cal = {'탄수화물 그람' : carbon_cal, '단백질 그람' : protein_cal
 onece_meal = {'탄수화물 그람' : carbon_cal/4, '단백질 그람' : protein_cal/4, '지방 그람' : fat_cal/4}
 print('하루 총 열량 : ', diet_cal)
 print('식사 한끼 열량(4끼) : ' , onece_meal)
-
-
 
