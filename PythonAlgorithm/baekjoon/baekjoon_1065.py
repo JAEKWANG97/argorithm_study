@@ -9,14 +9,12 @@ def hansu(n : int, value : int):
    
     temp = []
     if n < 100:
-        
         value = value + n
         return value
     else:
         for i in str(n):
             temp.append(int(i))
-        if (temp[0]+temp[2])/2 == temp[1]:
-            
+        if (temp[0]+temp[2])//2 == temp[1]:
             return hansu(n-1 , value+1)
         else:
             return hansu(n-1 , value)
@@ -24,7 +22,7 @@ def hansu(n : int, value : int):
 # 입력된 정수
 n = int(input())
 # 한수의 개수
-value = int(0) 
+value = 0
 
 print(hansu(n,value))
 
