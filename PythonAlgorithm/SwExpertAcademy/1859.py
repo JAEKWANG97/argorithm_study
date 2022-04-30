@@ -25,3 +25,45 @@
 # 1번째 케이스는 아무 것도 사지 않는 것이 최대 이익이다.
 
 # 2번째 케이스는 1,2일에 각각 한 개씩 사서 세 번째 날에 두 개를 팔면 10의 이익을 얻을 수 있다.
+
+
+
+# testcase
+# t = int(input())
+# # 10 7 6 11 5 5 5
+# t_list = list(map(int,input().split()))
+
+
+
+# temp = max(t_list)
+# index = t_list.index(temp)
+# count = 0
+# temp2 = 0 
+# sum_t_lsit = (sum(t_list[0 : index]))
+# temp*len(t_list[0 : index]) - sum_t_lsit
+# temp2 = index
+
+# for i in 
+
+T = int(input())
+ 
+for test_case in range(1, T + 1):
+    N = int(input())
+    li = list(map(int, input().split()))
+    max_price = max(li)
+    price = 0
+    count = 0
+    for i in range(N):
+        if li[i] < max_price:
+            price -= li[i]
+            count += 1
+        else:
+            price += count * li[i]
+            if li[i+1:]:
+                max_price = max(li[i+1:])
+            count = 0
+    if price < 0:
+        price = 0
+    print(f'#{test_case} {price}')
+
+    
