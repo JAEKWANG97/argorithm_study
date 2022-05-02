@@ -14,10 +14,14 @@ words = [word for word in re.sub(r'[^\w]', ' ' , paragraph)
         if word not in banned]
 
 
+
 print(words)
 
-# counts = collections.Counter(words)
+counts = collections.Counter(words)
 
+print(counts)
+
+print(counts.most_common(1)[0][1])
 # dddddddd
 
 # print(counts.most_common(1)[0][0])
