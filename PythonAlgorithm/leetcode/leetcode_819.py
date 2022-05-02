@@ -21,7 +21,7 @@ counts = collections.Counter(words)
 
 print(counts)
 
-print(counts.most_common(1)[0][1])
+print(counts.most_common(1)[0][0])
 # dddddddd
 
 # print(counts.most_common(1)[0][0])
