@@ -3,25 +3,29 @@
 # 첫 줄에 수의 개수 N이 주어진다. N은 100이하이다. 다음으로 N개의 수가 주어지는데 수는 1,000 이하의 자연수이다.
 import collections
 
+n = int(input())
 
-N = [i for i in range(2,int(10)+1)]
+nList = input().split()
+
+
+print(nList)
+
+
 # int(input())
 
 
 
 primeNum = []
-nonPrimeNum = []
+
 primeNum = list(collections.defaultdict(int))
-nonprimeNum = list(collections.defaultdict(int))
-for i in range(2,len(N)):
-    for j in range(1,i+1):
-        if i*j in N:
-            
-            print(N)
-            N[N.index(i*j)] = 0
+
+for i in range(2,len(nList)):
+    for j in range(1,len(nList)):
+        if i*j in nList: 
+            nList[nList.index(i*j)] = 0
             if i not in primeNum:
                 primeNum.append(i)
 
 
-print(N)
+
 print(primeNum)
