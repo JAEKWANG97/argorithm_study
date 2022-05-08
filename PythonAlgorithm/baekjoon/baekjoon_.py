@@ -1,12 +1,6 @@
-i = int(100)
+n = [1,2,3,4,5,6,7,8,9]
 
-print(str(i))
+for i in n :
+    i = 0
 
-
-natural_num =set(range(1,10001))
-
-generated_num = set()
-j = str('abcdef')
-
-for i in j:
-    print(i)
+print(n)
