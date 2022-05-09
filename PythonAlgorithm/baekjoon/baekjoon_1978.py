@@ -4,11 +4,10 @@
 import collections
 
 n = int(input())
-
 nList = input().split()
-
-
-print(nList)
+nList = list(map(int,nList))
+if 1 in nList:
+    nList.remove(1)
 
 
 # int(input())
@@ -19,8 +18,8 @@ primeNum = []
 
 primeNum = list(collections.defaultdict(int))
 
-for i in range(2,len(nList)):
-    for j in range(1,len(nList)):
+for i in nList:
+    for j in range(1,int(nList[-1])):
         if i*j in nList: 
             nList[nList.index(i*j)] = 0
             if i not in primeNum:
