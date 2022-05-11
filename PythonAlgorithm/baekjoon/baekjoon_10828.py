@@ -11,12 +11,15 @@
 
 import collections
 import re
+import sys
 
 
 class Stack:
-    def push(self, stackList : list, x : int):
-        stackList.append(x)
+    def push(self, stackList : list, x ):
+        stackList.append(int(x))
         return stackList
+
+
     def pop(self, stackList : list):
         if len(stackList) == 0:
             print('-1')
@@ -25,15 +28,21 @@ class Stack:
             print(stackList[-1])
             del stackList[-1]
             return stackList
+
+
     def size(self, stackList : list):
         print(len(stackList))
         return stackList
+
+
     def empty(self, stackList : list):
-        if stackList == 0:
+        if len(stackList) == 0:
             print('1')
         else:
             print('0')
         return stackList
+
+
     def top(self, stackList : list):
         if len(stackList) == 0 :
             print('-1')
@@ -43,12 +52,12 @@ class Stack:
 
 
 main = Stack()
-N = int(input())
+N = int(sys.stdin.readline())
 stackList = []
 
 
 for i in range(N):
-    command = input().split()
+    command = sys.stdin.readline().split()
     if command[0] == 'push':
         main.push(stackList, command[1])
     if command[0] == 'pop':
