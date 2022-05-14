@@ -10,10 +10,7 @@
 
 T = int(1)
 N = int(5)
-nList = [[str(input().split()).split()] for _ in range(N)]
+
+nList = [input().split() for _ in range(N)]
 
 print(nList)
-
-
-
-
