@@ -12,7 +12,6 @@
 
 words = ["eat", "tea", "tan", "ate", "nat", "bat"]
 
-word = [word for word in words]
+result_a = ''.join(words)
 
-print(word)
-    
+print(result_a)

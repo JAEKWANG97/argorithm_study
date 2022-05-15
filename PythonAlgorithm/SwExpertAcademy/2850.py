@@ -8,9 +8,22 @@
 # 52212
  
 
-T = int(1)
-N = int(5)
+T = int(input())
 
-nList = [input().split() for _ in range(N)]
-
-print(nList)
+for test_case in range(1, T + 1):
+    N = int(input())
+    garden = [input() for _ in range(N)]
+    sum_garden = 0
+    mid = N // 2
+    print(mid)
+    for i in range(N):
+        list_for_sum = []
+        for g in garden[i]:
+            list_for_sum.append(int(g))
+        if i < mid:
+            sum_garden += sum(list_for_sum[mid-i: -mid+i])
+        elif i == mid:
+            sum_garden += sum(list_for_sum[:])
+        else:
+            sum_garden += sum(list_for_sum[i-mid:mid-i])
+    print(f'#{test_case} {sum_garden}')
