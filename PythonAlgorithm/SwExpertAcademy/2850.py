@@ -13,6 +13,7 @@ T = int(input())
 for test_case in range(1, T + 1):
     N = int(input())
     garden = [input() for _ in range(N)]
+    print(garden[0][0])
     sum_garden = 0
     mid = N // 2
     print(mid)
