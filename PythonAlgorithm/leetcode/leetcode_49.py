@@ -4,11 +4,10 @@ import collections
 
 strs = ["eat","tea","tan", "ate", "nat", "bat"]
 
-# 그룹핑 후 담을 변수
 anagrams = collections.defaultdict(list)
 
 for word in strs:
-
     anagrams[''.join(sorted(word))].append(word)
+
 
 print(anagrams.values())
