@@ -15,8 +15,11 @@ for test_case in range(1, T + 1):
     garden = [input() for _ in range(N)]
     print(garden[0][0])
     sum_garden = 0
+
     mid = N // 2
+
     print(mid)
+    
     for i in range(N):
         list_for_sum = []
         for g in garden[i]:

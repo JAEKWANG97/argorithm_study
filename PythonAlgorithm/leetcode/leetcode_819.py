@@ -16,7 +16,7 @@ print(words)
 
 counts = collections.Counter(words)
 print(counts)
-print(counts.most_common(2)[0])
+print(counts.most_common(1)[0])
 
 
 # dddddddd
