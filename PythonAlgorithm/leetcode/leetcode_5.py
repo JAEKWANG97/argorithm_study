@@ -11,7 +11,7 @@
 s = 'cbbd'
 
 
-def longestPalindrome(self, s : str) -> str:
+def longestPalindrome(s : str) -> str:
     #팰린드롬 판별 및 투 포인터 확장
     def expand(left : int, right : int) -> str:
         while left >= 0 and right < len(s) and s[left] == s[right]:
@@ -26,6 +26,8 @@ def longestPalindrome(self, s : str) -> str:
         #슬라이딩 윈도우 우측으로 이동
         for i in range(len(s) - 1):
             result = max(result, expand(i , i+1), expand(i,i+2),key= len)
-
-
 print(longestPalindrome(s))
+
+
+
+
