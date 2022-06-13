@@ -27,4 +27,3 @@ def longestPalindrome(s:str) -> str:
 print(longestPalindrome(s))
 
 
-d
