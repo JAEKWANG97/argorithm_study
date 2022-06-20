@@ -11,7 +11,7 @@
 # 스택 구조를 이용해서 풀 수 있을 것 같다.
 
 import sys
-sys.stdout = open('C:/argorithm_study/leetcode_42.txt','a')
+# sys.stdout = open('C:/gitdesk/argorithm_study/leetcode_42.txt','w')
 
 
 
@@ -33,7 +33,7 @@ def trap(height: list ) -> int:
         print("left, right 높이", height[left], height[right])
     # 더 높은 쪽을 향해 투 포인터 이동
         if left_max <= right_max:
-            print("\t left_max <= right_max")
+            print("\tleft_max <= right_max")
             print(f"\t{volume} += {left_max} - {height[left]}")
             volume += left_max - height[left]
             print(f"\tvolume = {volume} ")
