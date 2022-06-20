@@ -1,0 +1,68 @@
+12
+left_max, right_max = 0, 1
+left, right 높이 0 1
+	 left_max <= right_max
+	0 += 0 - 0
+	volume = 0 
+	left += 1 , left = 1
+left_max, right_max = 1, 1
+left, right 높이 1 1
+	 left_max <= right_max
+	0 += 1 - 1
+	volume = 0 
+	left += 1 , left = 2
+left_max, right_max = 1, 1
+left, right 높이 0 1
+	 left_max <= right_max
+	0 += 1 - 0
+	volume = 1 
+	left += 1 , left = 3
+left_max, right_max = 2, 1
+left, right 높이 2 1
+	left_max > right_max
+	1 += 1 - 1
+	volume = 1 
+	left += 1 , left = 3
+left_max, right_max = 2, 2
+left, right 높이 2 2
+	 left_max <= right_max
+	1 += 2 - 2
+	volume = 1 
+	left += 1 , left = 4
+left_max, right_max = 2, 2
+left, right 높이 1 2
+	 left_max <= right_max
+	1 += 2 - 1
+	volume = 2 
+	left += 1 , left = 5
+left_max, right_max = 2, 2
+left, right 높이 0 2
+	 left_max <= right_max
+	2 += 2 - 0
+	volume = 4 
+	left += 1 , left = 6
+left_max, right_max = 2, 2
+left, right 높이 1 2
+	 left_max <= right_max
+	4 += 2 - 1
+	volume = 5 
+	left += 1 , left = 7
+left_max, right_max = 3, 2
+left, right 높이 3 2
+	left_max > right_max
+	5 += 2 - 2
+	volume = 5 
+	left += 1 , left = 7
+left_max, right_max = 3, 2
+left, right 높이 3 1
+	left_max > right_max
+	5 += 2 - 1
+	volume = 6 
+	left += 1 , left = 7
+left_max, right_max = 3, 2
+left, right 높이 3 2
+	left_max > right_max
+	6 += 2 - 2
+	volume = 6 
+	left += 1 , left = 7
+6

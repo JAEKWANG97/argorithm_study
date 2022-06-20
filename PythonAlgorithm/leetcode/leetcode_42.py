@@ -10,20 +10,43 @@
 
 # 스택 구조를 이용해서 풀 수 있을 것 같다.
 
+import sys
+sys.stdout = open('C:/argorithm_study/leetcode_42.txt','a')
+
+
+
 rain = [0,1,0,2,1,0,1,3,2,1,2,1]
-temp = []
-water = 0
+print(len(rain))
 
-for i in rain:
-    temp.append(int(i))
-    # 첫 요소가 0일 경우 불필요한 자료이기때문에 pop
-    if temp[0] == 0:
-        temp.pop()
-    # 이제 max 값을 찾으면서 그 이전의 요소들을 빼줘서 고인 물을 찾을 거임
-    if len(temp) > 1:
-        print(i, water)
-        if max(temp) > i:
-            
+def trap(height: list ) -> int:
+    if not height:
+        return 0
+    
+    volume = 0
+    left, right = 0, len(height) -1
+    
+    left_max,right_max =height[left], height[right]
 
+    while left < right:
+        left_max, right_max = max(height[left],left_max),max(height[right],right_max)
+        print(f"left_max, right_max = {left_max}, {right_max}")
+        print("left, right 높이", height[left], height[right])
+    # 더 높은 쪽을 향해 투 포인터 이동
+        if left_max <= right_max:
+            print("\t left_max <= right_max")
+            print(f"\t{volume} += {left_max} - {height[left]}")
+            volume += left_max - height[left]
+            print(f"\tvolume = {volume} ")
+            left += 1
+            print(f"\tleft += 1 , left = {left}")
+        else:
+            print("\tleft_max > right_max")
+            print(f"\t{volume} += {right_max} - {height[right]}")
+            volume += right_max - height[right]
+            print(f"\tvolume = {volume} ")
+            right -= 1
+            print(f"\tleft += 1 , left = {left}")
+    return volume
 
-print(temp, water)
+print(trap(rain))
+sys.stdout.close()
