@@ -1,65 +1,34 @@
-# def twoSum(nums: list[int], target : int) -> list[int]:
-#     nums_map = {}
-#     # 키와 값을 바꿔서 딕셔너리로 저장
-#     for i , num in enumerate(nums):
-#         nums_map[num] = i
+height = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
 
-#     # 타겟에서 첫 번째 수를 뺀 결과를 키로 조회
-#     for i , num in enumerate(nums):
-#         temp = target - num
-#         if temp in nums_map and i != nums_map[temp]:
-#             return [i, nums_map[temp]]
+def trap(height):
 
+    volume = 0
 
-nums = [2,7,11,15]
-target = 9
-# # print(twoSum(nums, target))
-# nums_map = {}
-# for i , num in enumerate(nums):
-        
-#        nums_map[num] = i
-#        print(nums_map[num])
+    # 높이가 없을 때
+    if not height:
+        return 0
+    
+    # 포인터 지정 / left, right = >인덱스값
+    left = 0
+    right = len(height) - 1
 
-# for i , num in enumerate(nums):
-#     print(i , num)
+    # 최댓값 초기화 // left_max, right_max => 인덱스 값
+    left_max = height[left]
+    right_max = height[right]
 
-
-
-# from typing import List
-
-
-# def twoSum(nums: List[int], target: int) -> list[int]:
-#     nums_map  = {}
-#     # 하나의 for문으로 통합
-#     for i, num in enumerate(nums):
-#         if target - num in nums_map:
-#             return [nums_map[target - num], i]
-#         nums_map[num] = i
-
-# nums_map  = {}
-#     # 하나의 for문으로 통합
-# for i, num in enumerate(nums):
-#     if target - num in nums_map:
-#         print ([nums_map[target - num], i])
-#     nums_map[num] = i
-
-
-
-
-
-def twoSum(nums: list[int] , target: int) -> list[int]:
-    left, right =0, len(nums) -1
-    while not left == right:
-        #합이 타겟보다 작으면 왼쪽 포인터를 오른쪽으로
-        if nums[left] + nums[right] < target:
+    while left < right :
+        # 최댓값 찾기
+        left_max , right_max = max(left_max , height[left]), max(right_max, height[right])
+        # 더 높은 쪽을 향해 투포인터 이동
+        if left_max < right_max:
+            volume += left_max - height[left]
             left += 1
-        # 합이 타겟보다 크면 오른쪽 포인터를 왼쪽으로
-        elif nums[left] + nums[right] > target:
-            right -= 1
         else:
-            return [left, right]
+            volume += right_max - height[right]
+            right -= 1
+        
 
+    return volume
 
-
-
-
+print(trap(height))
+            

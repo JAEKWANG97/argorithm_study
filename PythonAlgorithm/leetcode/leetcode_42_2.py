@@ -1,10 +1,9 @@
-from ast import List
-from inspect import stack
-from turtle import distance
+
+
 import sys
 sys.stdout = open('C:/argorithm_study/leetcode42_2.txt', 'w');
-rain = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
-print(f'rain = {rain}')
+height = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
+print(f'height = {height}')
 def trap(height: list) -> int:
     stack = []
     volume = 0
@@ -36,6 +35,6 @@ def trap(height: list) -> int:
     print(f"\tvolume = {volume}")
     return volume
 
-print(trap(rain))
+print(trap(height))
 
 sys.stdout.close()

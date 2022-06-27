@@ -1,4 +1,4 @@
-rain = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
+height = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
 	for i in range(12)
 		stack.append(i) , 0
 		while stack and height[1] > height[0]: , while stack and 1 > 0:
