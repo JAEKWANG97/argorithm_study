@@ -1,9 +1,12 @@
 # leetcode 15 투포인터를 이용한 풀이
 
+from ast import List
+
+
 nums = [-4,-1,-1,0,1,2]
 
 
-def threeSum(nums: list[int]) -> list[list[int]]:
+def threeSum(nums: List[int]) -> List[List[int]]:
     results = []
     nums.sort()
 
