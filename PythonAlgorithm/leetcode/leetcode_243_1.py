@@ -8,15 +8,31 @@
 
 
 
+from ast import List
 
-from tkinter.tix import ListNoteBook
+
+def isPalindrome(head : ListNode) -> bool:
+    q: List = []
+    
+    # 연결리스트가 비어 있다면
+    if not head:
+        return True
+
+    
+    node = head
+
+    # 리스트 변환   
+
+    while node is not None:
+        q.append(node.val)
+        node = node.next
 
 
-nums = ListNoteBook()
+    # 팰린드롬 판별
 
-nums.addAthead(1)
-nums.addAtTail(2)
-nums.addAtTail(2)
-nums.addAtTail(1)
+    while len(q) > 1 :
+        if q.pop(0) != q.pop():
+            return False
+    
 
-print(nums)
+    return True
